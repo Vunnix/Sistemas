@@ -6,7 +6,7 @@
  * Date: 10/07/16
  * Time: 12:26
  */
-    include  '../DAO/VAR/Vars.php';
+    include '../DAO/DEFINES/Define.php';
     Abstract class ConectaBD
     {
         private static $instance = null;

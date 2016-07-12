@@ -34,7 +34,7 @@
                 $tabela .='</tr>';
             }
             header('Content-Type: application/x-msexcel');
-            header ("Content-Disposition: attachment; filename=\".$arquivo.\"");
+            header ("Content-Disposition: attachment; filename=\".$arquivo.\".");
             echo $tabela;
         }
 }
