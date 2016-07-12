@@ -2,12 +2,7 @@
     include '../DAO/ToFish.php';
     session_start();
     $_SESSION['usuario'] = 'usuario';
-    $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_MAGIC_QUOTES);
 
-    if(isset($_POST['send']) && isset($_SESSION['usuario'])) {
-        //chamar função faz o processo de enviar o email com anexo
-        echo "askd";
-    }
     if(isset($_POST['download']) && isset($_SESSION['usuario'])){
         $download = new ToFish();
         $download->PescarDados();
@@ -24,11 +19,7 @@
         <title> </title>
         </head>
     <body>
-    <form name="enviar_email" method="post">
-        <br><br>
-        <input type="text" name="email">
-        <input type="submit" name="send" value="Enviar o arquivo">
-        <br><br>
+    <form name="download_excel" method="post">
         <input type="submit" name="download"class="btn btn-sucess" value="Protocolo">
     </form>
     </body>
